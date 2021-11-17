@@ -14,6 +14,9 @@ app.get("/", (req, res) => {
 const comicsRoutes = require("./routes/comics")
 app.use(comicsRoutes)
 
+const characterRoutes = require("./routes/characters")
+app.use(characterRoutes)
+
 app.listen(process.env.PORT, () => {
   console.log("Server started on Port 4000");
 });
