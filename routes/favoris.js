@@ -6,7 +6,7 @@ const axios = require("axios");
 const apiKey = process.env.API_KEY;
 
 
-router.get("/comics", async (req, res) => {
+router.get("/favourites", async (req, res) => {
     try {
       const response = await axios.get(
         `https://lereacteur-marvel-api.herokuapp.com/comics?apiKey=${apiKey}`
