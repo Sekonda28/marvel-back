@@ -9,7 +9,7 @@ router.get("/comics", async (req, res) => {
   let searchTitle = ""
   try {
     if(req.query.title){
-      searchTitle= "&name="+req.query.title}
+      searchTitle= "&title="+req.query.title}
     const response = await axios.get(
       `https://lereacteur-marvel-api.herokuapp.com/comics?apiKey=${apiKey}${searchTitle}`
     );
