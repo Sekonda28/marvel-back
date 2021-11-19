@@ -16,11 +16,10 @@ app.get("/", (req, res) => {
 const comicsRoutes = require("./routes/comics")
 app.use(comicsRoutes)
 
-const favorisRoutes = require("./routes/favoris")
-app.use(favorisRoutes)
 
 const characterRoutes = require("./routes/characters")
 app.use(characterRoutes)
+
 app.all("*", (req, res)=>{
   {res.status(404).json("This page does not exist ! ")}
 })
