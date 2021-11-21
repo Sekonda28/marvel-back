@@ -11,7 +11,7 @@ router.get("/comics", async (req, res) => {
     if(req.query.title){
       searchTitle= "&title="+req.query.title}
     const response = await axios.get(
-      `https://lereacteur-marvel-api.herokuapp.com/comics?limit=100&apiKey=${apiKey}&${searchTitle}&skip={req.query.skip}`
+      `https://lereacteur-marvel-api.herokuapp.com/comics?apiKey=${apiKey}&${searchTitle}`
     );
     res.status(200).json(response.data.results);
   } catch (error) {
