@@ -13,7 +13,7 @@ router.get("/characters", async (req, res) => {
     
     }
     const response = await axios.get(
-      `https://lereacteur-marvel-api.herokuapp.com/characters?apiKey=${apiKey}${searchName}`
+      `https://lereacteur-marvel-api.herokuapp.com/characters?apiKey=${apiKey}&limit=100${searchName}`
     );
     res.status(200).json(response.data.results);
   } catch (error) {
